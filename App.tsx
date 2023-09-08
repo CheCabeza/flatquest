@@ -1,19 +1,19 @@
 // In App.js in a new project
-import "react-native-gesture-handler";
-import * as React from "react";
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { View, StyleSheet } from "react-native";
+import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
+import * as React from "react";
+import { StyleSheet, View } from "react-native";
+import "react-native-gesture-handler";
+import Icon from "react-native-vector-icons/FontAwesome";
 import { Provider } from "react-redux";
-import store from "./src/redux/store/index";
-import Login from "./src/components/Login/Login";
 import Details from "./src/components/Details/Details";
 import EditFlatReview from "./src/components/EditFlatReview/EditFlatReview";
-import Map from "./src/components/Maps/Maps";
-import Filter from "./src/components/Filter/Filter";
 import Favorites from "./src/components/Favorites/Favorites";
+import Filter from "./src/components/Filter/Filter";
 import List from "./src/components/List/List";
-import Icon from "react-native-vector-icons/FontAwesome";
+import Login from "./src/components/Login/Login";
+import Map from "./src/components/Maps/Maps";
+import store from "./src/redux/store/index";
 
 const Tab = createBottomTabNavigator();
 
@@ -44,9 +44,6 @@ function App() {
             style: {
               position: "absolute",
               display: "flex",
-              alignItems: "center",
-              backgroundColor: "#FFB800",
-              height: 70,
             },
           }}
         >
