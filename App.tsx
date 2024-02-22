@@ -31,6 +31,12 @@ function App() {
       <NavigationContainer theme={MyTheme}>
         <Tab.Navigator
           screenOptions={({ route }) => ({
+            tabBarStyle: [
+              {
+                position: "absolute",
+                display: "flex",
+              },
+            ],
             tabBarButton: ["Details", "EditFlatReview", "Home"].includes(
               route.name
             )
@@ -39,19 +45,12 @@ function App() {
                 }
               : undefined,
           })}
-          tabBarOptions={{
-            showLabel: false,
-            style: {
-              position: "absolute",
-              display: "flex",
-            },
-          }}
         >
           <Tab.Screen
             name="Home"
             component={Login}
             options={{
-              tabBarVisible: false,
+              tabBarStyle: { display: "none" },
               tabBarIcon: ({ focused }) => (
                 <View style={styles.tab}>
                   <Icon
